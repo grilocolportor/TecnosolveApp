@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-a
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,6 +11,7 @@ import { CadastroProvider } from '../providers/cadastro/cadastro';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 
 import { BrMaskerModule } from 'brmasker-ionic-3';
+import { CadastradosPage } from '../pages/cadastrados/cadastrados';
 
 
 
@@ -19,8 +19,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    CadastroPage
+    CadastroPage,
+    CadastradosPage
   ],
   imports: [
     BrowserModule,
@@ -33,8 +33,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    CadastroPage
+    CadastroPage,
+    CadastradosPage
   ],
   providers: [
     StatusBar,

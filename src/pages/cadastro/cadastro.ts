@@ -24,28 +24,29 @@ export class CadastroPage {
     telefone: ""
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
+    //carrega lista 
     this.atualizarList();
   }
 
+  //novo usuario
   newUsuario() {
 
+  
     let c = JSON.parse(localStorage.getItem("usuario"));
 
+    
     if (c != null) {
-
+        //adciona um novo cadastro na lista
         this.list.unshift(JSON.parse(JSON.stringify(this.cadastro)));
-        console.log(this.list);
         localStorage.setItem("usuario", JSON.stringify(this.list));
         this.limparCampos();
-       this.atualizarList();
+        this.atualizarList();
 
     } else {
+      //inicializa a lista e insere primeiro cadastro na lista
       this.list = [];
       this.list.unshift(JSON.parse(JSON.stringify(this.cadastro)));
       localStorage.setItem("usuario", JSON.stringify(this.list));
@@ -63,9 +64,10 @@ export class CadastroPage {
 
   atualizarList(){
     this.list = JSON.parse(localStorage.getItem("usuario"));
-    console.log(this.list);
+    //console.log(this.list);
   }
 
+  //volta para a pagina home
   goToOtherPage() {
     //push another page onto the history stack
     //causing the nav controller to animate the new page in
