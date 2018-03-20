@@ -13,16 +13,16 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  scroll="true">
 
-   <ion-scroll style="height: 100%;">
-        <ion-list>
-          <button ion-item *ngFor="let l of list" style="width: 100%">
+  
+        <ion-list > 
+          <button ion-item *ngFor="let l of list" style="width: 100%;">
             <h3>{{l.nome}}</h3>
             <p>tel: {{l.telefone}} </p>
             <p>CPF: {{l.cpf}}</p>
           </button>
         </ion-list>
-      </ion-scroll>
+     
 
 </ion-content>

@@ -23,12 +23,12 @@
       </ion-item>
       <ion-item>
         <ion-label floating>Telefone:</ion-label>
-        <ion-input type="text" name="phone" [brmasker]="{phone: true}" [(ngModel)]=cadastro.telefone></ion-input>
+        <ion-input type="text" name="phone" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}" [(ngModel)]=cadastro.telefone></ion-input>
         <!--<ion-input  type="text" [(ngModel)]=cadastro.rg></ion-input>-->
       </ion-item>
       <ion-item>
         <ion-label floating>CPF:</ion-label>
-        <ion-input type="text" name="cpf" [brmasker]="{person: true}" [(ngModel)]=cadastro.cpf></ion-input>
+        <ion-input type="text" name="cpf" [brmasker]="{mask:'000.000.000-00', len:14, type:'num'}" [(ngModel)]=cadastro.cpf></ion-input>
         <!--<ion-input  type="text" [(ngModel)]=cadastro.cpf></ion-input>-->
       </ion-item>
 
