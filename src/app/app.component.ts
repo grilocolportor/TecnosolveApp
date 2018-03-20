@@ -23,7 +23,7 @@ export class MyApp {
 
     //menu lateral
     this.pages = [
-      { title: 'Atualizar Página', component: HomePage },
+      { title: 'Atualizar Página', component: this.doRefresh },
       { title: 'Cadastro', component: CadastroPage },
       { title: 'Cadastrados', component: CadastradosPage},
       { title: 'Sair', component: this.presentConfirm}
@@ -69,13 +69,16 @@ export class MyApp {
     alert.present();
   }
 
+  doRefresh(){
+    this.nav.setRoot(HomePage);
+  }
   //volta para pagina Home
   openPage(page) {
    
     if(page.title=="Sair"){
       this.presentConfirm();
-    }else if(page.component=="Atualizar Página"){
-      console.log();
+    }else if(page.title=="Atualizar Página"){
+      this.doRefresh();
     }else{
       this.nav.push(page.component);
     }
